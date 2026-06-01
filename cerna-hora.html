@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizzerie U Zajíce – Černá Hora. Aktuální menu, kontakty a objednávka rozvozu.">
+  <title>Pizzerie U Zajíce – Černá Hora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/zajic.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-header__back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Zpět na výběr</span>
+    </a>
+    <div class="site-header__center">
+      <img src="images/zajic.png" alt="Logo" class="site-header__logo">
+      <span class="site-header__location">Černá Hora</span>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <div class="main-layout">
+
+      <aside class="info-column">
+        <img src="images/cernahora.jpg" alt="Pizzerie U Zajíce – budova v Černé Hoře" class="info-column__photo">
+
+        <div class="contact-box">
+          <h2 class="contact-box__title">Kontaktní údaje</h2>
+
+          <div class="contact-box__item">
+            <div class="contact-box__label">Otevírací doba</div>
+            <div class="contact-box__value">
+              Pondělí: 10:30 – 21:00<br>
+              Úterý: 10:30 – 21:00<br>
+              Středa: 10:30 – 21:00<br>
+              Čtvrtek: 10:30 – 21:00<br>
+              Pátek: 10:30 – 23:00<br>
+              Sobota: 11:00 – 23:00<br>
+              Neděle: 11:00 – 21:00
+            </div>
+          </div>
+
+          <div class="contact-box__item">
+            <div class="contact-box__label">Telefon</div>
+            <div class="contact-box__value">
+              <a href="tel:+420733550515">733 550 515</a>
+            </div>
+          </div>
+
+          <div class="contact-box__item">
+            <div class="contact-box__label">Adresa</div>
+            <div class="contact-box__value">
+              nám. Míru 38<br>
+              679 21 Černá Hora
+            </div>
+          </div>
+
+          <a href="rozvoz.html" class="btn-primary">
+            <i class="fa-solid fa-motorcycle"></i>&nbsp; Objednat rozvoz
+          </a>
+        </div>
+      </aside>
+
+      <section class="menu-column">
+        <div class="menu-column__header">
+          <h2 class="menu-column__title">Naše nabídka</h2>
+
+          <div class="menu-tabs">
+            <button class="menu-tab active" data-tab="obed">
+              <i class="fa-solid fa-utensils"></i> Obědové menu
+            </button>
+            <button class="menu-tab" data-tab="listek">
+              <i class="fa-solid fa-pizza-slice"></i> Jídelní lístek
+            </button>
+            <button class="menu-tab" data-tab="napoje">
+              <i class="fa-solid fa-wine-glass"></i> Nápoje
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-panel active" id="panel-obed">
+          <div class="menu-iframe-wrap">
+            <iframe
+              src="https://www.menicka.cz/api/iframe/?id=7934"
+              title="Obědové menu – Černá Hora"
+              style="width:100%;min-height:1300px"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-listek">
+          <div class="menu-iframe-wrap">
+            <iframe
+              src="https://www.menicka.cz/api/iframe/jidelnilistek/?id=8903"
+              title="Jídelní lístek – Černá Hora"
+              style="width:100%;min-height:1990px"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-napoje">
+          <img src="images/napojovy_listek.jpg" alt="Nápojový lístek – Černá Hora" class="menu-drinks-img">
+        </div>
+
+      </section>
+
+    </div>
+
+    <section class="allergens-section">
+      <h3 class="allergens-section__title">Informace o alergenech</h3>
+      <button class="btn-allergens" id="btn-allergens" aria-expanded="false" aria-controls="allergens-list">
+        <span>Zobrazit seznam alergenů</span>
+        <span class="btn-allergens__icon"><i class="fa-solid fa-chevron-down"></i></span>
+      </button>
+
+      <div class="allergens-list" id="allergens-list" role="region" aria-labelledby="btn-allergens">
+        <div class="allergens-list__item"><span class="allergens-list__number">1</span> Obiloviny obsahující lepek (pšenice, žito, ječmen, oves, špalda, kamut nebo jejich hybridní odrůdy)</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">2</span> Korýši a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">3</span> Vejce a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">4</span> Ryby a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">5</span> Jádra podzemnice olejné (arašídy) a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">6</span> Sójové boby a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">7</span> Mléko a výrobky z něj (včetně laktózy)</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">8</span> Skořápkové plody (mandle, lískové ořechy, vlašské ořechy, kešu, pekan, para ořechy, pistácie, makadamie) a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">9</span> Celer a výrobky z něj</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">10</span> Hořčice a výrobky z ní</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">11</span> Sezamová semena a výrobky z nich</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">12</span> Oxid siřičitý a siřičitany (v koncentracích vyšších než 10 mg/kg nebo 10 mg/l)</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">13</span> Vlčí bob (lupina) a výrobky z něj</div>
+        <div class="allergens-list__item"><span class="allergens-list__number">14</span> Měkkýši a výrobky z nich</div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    &copy; 2026 Pizzerie U Zajíce<br>
+    <span class="site-footer__credit">Designed by Triangl</span>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.menu-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.menu-tab').forEach(function(t) { t.classList.remove('active'); });
+        document.querySelectorAll('.menu-panel').forEach(function(p) { p.classList.remove('active'); });
+
+        tab.classList.add('active');
+        var panelId = 'panel-' + tab.getAttribute('data-tab');
+        document.getElementById(panelId).classList.add('active');
+      });
+    });
+
+    var btnAllergens = document.getElementById('btn-allergens');
+    var allergensList = document.getElementById('allergens-list');
+
+    btnAllergens.addEventListener('click', function() {
+      var isOpen = allergensList.classList.toggle('open');
+      btnAllergens.classList.toggle('active', isOpen);
+      btnAllergens.setAttribute('aria-expanded', isOpen);
+      var label = btnAllergens.querySelector('span:first-child');
+      label.textContent = isOpen ? 'Skrýt seznam alergenů' : 'Zobrazit seznam alergenů';
+    });
+  </script>
+
+</body>
+</html>
